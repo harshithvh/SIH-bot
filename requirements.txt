@@ -5,6 +5,7 @@ cached-property==1.5.2
 cachetools==4.2.2
 webdriver_manager
 chromedriver-autoinstaller
+lxml==4.6.3
 numpy==1.19.5
 sklearn==0.0
 Keras==2.4.3

@@ -19,3 +19,4 @@ def response(query):
 if __name__=='__main__':
     app.run(debug=True)
 
+# heroku config:set WEB_CONCURRENCY=1
