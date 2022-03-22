@@ -115,7 +115,7 @@ def search(query):
     #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
     #driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
     #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options = chrome_options)
     driver.get('https://www.google.com/')
     time.sleep(0.5)
     driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(query)
