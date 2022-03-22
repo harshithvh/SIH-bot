@@ -1,0 +1,477 @@
+{
+	"intents": 
+	[
+		{
+	     "tag": "greeting",
+	     "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","How are you","Whats up"],
+	     "responses": ["Hello, how can I help?", "Good to see you again", "Hi there, how can I help?"]
+        	},
+        	{
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time", "No, that's it"],
+            "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."]
+                },
+                {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+                },
+                {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": ["Sorry couldn't find anything. I am still learning"]
+                },
+                {
+            "tag": "options",
+            "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?", "What support is offered","what can you do for me",
+                "what are the thing you can do"],
+            "responses": [ "You can ask me questions regarding college, and i will try to answer them"]
+                },
+                {
+            "tag": "creator",
+            "patterns": [
+
+                    "what is the name of your developers",
+                    "what is the name of your creators",
+                    "what is the name of the developers",
+                    "what is the name of the creators",
+                    "who created you",
+                    "your developers",
+                    "your creators",
+                    "who are your developers",
+                    "developers",
+                    "you are made by",
+                    "you are made by whom",
+                    "who created you",
+                    "who create you",
+                    "creators",
+                    "who made you",
+                    "who designed you"
+                    ],
+            "responses": [
+                            "Harshith VH developed me in 2022, for their Smart India Hackathon project"
+                   ]
+                },
+                {
+                    "tag": "name",
+                    "patterns": [
+                            "name",
+                            "your name",
+                            "do you have a name",
+                            "what are you called",
+                            "what is your name",
+                            "what should I call you",
+                            "whats your name?",
+                            "what are you",
+                            "who are you",
+                            "who is this",
+                            "what am i chatting to",
+                            "who am i taking to",
+                            "what are you"
+                    ],
+                    "responses": [
+                            "I'm an AI i don't have a name :)"
+                    ]        
+                },
+                {
+                    "tag": "random",
+                    "patterns": [
+                            
+                            "I love you",
+                            "Will you marry me",
+                            "Do you love me"
+                    ],
+                    "responses": [
+                            "I am not program for this please ask appropriate query"
+                    ]
+            },
+            {
+                    "tag": "swear",
+                    "patterns": [
+                            "fuck",
+                            "bitch",
+                            "shut up",
+                            "hell",
+                            "stupid",
+                            "idiot",
+                            "dumb ass",
+                            "asshole",
+                            "fucker"
+                    ],
+                    "responses": [
+                            "please use appropriate language",
+                            "Maintaining decency would be appreciated"
+                    ]
+            },
+            {"tag": "after nine",
+                "patterns": ["what can i do after class nine?" ],
+                "responses": ["you can prepare for good colleges like IIT's,AIMS & give some competetive exams to test your knowledge and see where you stand in competetion"]
+                },
+        
+                {"tag": "stream nine",
+                "patterns": ["which stream should i choose in class nine?"],
+                "responses": ["you can choose your stream according to your intrest and in which you enjoy your studies" ]
+                },
+        
+                {"tag": "exam nine",
+                "patterns": ["what kind of competetive exams are there for class nine student?"],
+                "responses": ["some popular exams are NTSE,INO,KVPY,ASSET,NBO,NIMO"]
+                },
+        
+                {
+                "tag": "icse ten",
+                "patterns":["What is the ten board ICSE syllabus", "icse syllabus class ten", "icse reduced syllabus class 10", "How to prepare for icse class 10"],
+                "responses":["Group I - Compulsory Subjects:\n  English\n  Second Languages (Indian Languages or Modern Foreign Languages)\n  History, Civics and Geography\nGroup II – (Any two of the following subjects):\n  Mathematics\n  Science (Physics, Chemistry and Biology)\n  Economics\n  Commercial Studies\n  Technical Drawing\n  Modern Foreign Language\n  Classical Language\n  Computer Science\n  Environmental Science\n  Agricultural Science\nGroup III – (Any one of the following subjects):\n  Computer Applications\n  Economic Applications\n  Economic Applications\n  Art\n  Home Science\n  Fashion Designing\n  Physical Education"]
+                },
+                {
+                "tag": "cbse ten",
+                "patterns":["What is the ten board cbse syllabus", "cbse syllabus class ten", "cbse reduced syllabus class 10", "How to prepare for cbse class 10"],
+                "responses":["Compulsory Subjects:\n  Language 1\n  Language 2\n  Science\n  Social Science\n  Mathematics\nOptional:\n  Skill Subject\n  Language 3\nSubjects of Internal Assessment:\n  Art Education\n  Health and Physical Education"]
+                },
+        
+        
+                {"tag": "stream ten",
+                "patterns": ["which stream should i choose in class ten"],
+                "responses": ["you can choose your stream according to your intrest and in which you enjoy your studies "]
+                },
+        
+                {"tag": "exam ten",
+                "patterns": ["what kind of competetive exams are there for class ten student?"],
+                "responses": ["some popular exams are NTSE,INO,KVPY,ASSET,NBO,GMAT,NIMO,you can also prepare for government exams like NDA "]
+                },
+        
+                {
+                "tag": "after ten",
+                "patterns":["which stream and subjects to choose after class ten", "what next after class ten", "what to do after class ten", "what are the options after class ten","subjects after class 10"],
+                "responses":["Science stream in 11th and 12th class:\n  Physical Science Subjects - Physics, Chemistry\n  Biological Science Subjects - Biology, Biotechnology, Agriculture, Food Science, Sports, Exercise & Health Science, etc.\n  Mathematical Science Subjects – Mathematics, Statistics\nArts and Humanities stream in 11th and 12th class:\n  Elective Indian Languages like Hindi, Marathi, Gujarati, Punjabi, Bengali etc\n  Elective Foreign Languages like English, French, German, Italian, Spanish, Latin etc\n  Arts and humanities subjects like – Psychology, Economics, Geography, Sociology, History etc\n  Fine art and performing art subjects like – Fine Art, Visual Art, Dance, Music etc\nCommerce / Business stream in 11th and 12th class:\n  Commerce and Business subjects like – Accountancy, Business Studies, Commerce, Economics etc\n  Mathematics, Statistics, Computer Science - some boards let you keep a Science subject along with other commerce subjects."]
+                },
+        
+        
+                {"tag": "after eleven",
+                "patterns": ["what can i do after class eleven?" ],
+                "responses": ["you can prepare for good colleges like IIT's,AIMS & give some competetive exams to test your knowledge and see where you stand in competetion" ]
+                },
+        
+                {"tag": "stream eleven",
+                "patterns": ["which stream should i choose in class eleven?"],
+                "responses": ["you can choose your stream according to your intrest and in which you enjoy your studies "]
+                },
+        
+                {"tag": "exam eleven",
+                "patterns": ["what kind of competetive exams are there for class eleven student?"],
+                "responses": ["some popular exams are NTSE,INO,KVPY,ASSET,NBO,NIMO"]
+                },
+                       
+                {"tag": "after twelve",
+                "patterns": ["what can i do after class twelve?" ],
+                "responses": ["you can prepare for good colleges like IIT's,AIMS & give some competetive exams to test your knowledge and see where you stand in competetion"  ]
+                },
+                {
+                 "tag": "courses twelve",
+                 "patterns": ["What are the courses available after 12 grade?", "What are the courses available after twelve?", "what are the courses after twelve", "what are the courses after class 12"],
+                 "responses": ["BE/B.Tech- Bachelor of Technology\nB.Arch.- Bachelor of Architecture\nBCA- Bachelor of Computer Applications\nB.Pharma- Bachelor of Pharmacy\nBDS- Bachelor of Dental Surgery\nB.Sc.-  Bachelor of Science\nBPT- Bachelor of Physiotherapy\nB.Com- Bachelor of Commerce\nBBA- Bachelor of Business Administration\nBA (Hons.) in Economics\nIntegrated Law Program- B.Com LL.B.\nIntegrated Law Program- BBA LL.B\nMBBS"]
+                },
+        
+                {"tag": "exam twelve",
+                "patterns": ["what kind of competetive exams are there for class twelve student?"],
+                "responses": ["some popular exams are IIT,NEET,BITSAT,AIMCAT etc"]
+                },
+                {
+                "tag": "engineering colleges",
+                "patterns":["Top engineering colleges", "Which is the best engineering college in India","Where can I study engineering in India"],
+                "responses":["IIT's:\n  IIT Madras - Chennai\n  IIT Delhi - New Delhi\n  IIT Bombay - Mumbai\n  IIT Kanpur - Kanpur\nNIT's:\n  NIT Tiruchirappalli - Tiruchirappalli\n  NIT Karnataka - Surathkal\n  NIT Rourkela - Rourkela\n  NIT Warangal - Warangal"]
+                },
+                {
+                "tag": "medical colleges",
+                "patterns":["Top medical colleges", "Which is the best medical college in India","Where can I study medical in India", "Which is the best university for MBBS in india"],
+                "responses":["Here are a few top medical colleges in India:\n  All India Institute Of Medical Sciences, New Delhi\n  Christian Medical College, Vellore\n  Armed Forces Medical College, Pune\n  NIMHANS, Bangalore\n  PGIMER Chandigarh\n  Parul University, Vadodara"]
+                },
+                {
+                "tag": "jee eligibility",
+                "patterns": ["What is the eligibility for JEE mains", "what is the eligibilty for jee"],
+                "responses": ["Age Limit:\n  No age limit\nQualifying exam:\n  Class 12/equivalent exam\nSubjects in qualifying exam:\n  For JEE Main Paper 1 (B.Tech)- Physics and Maths as compulsory subjects and any one subject among Chemistry/Biology/Technical Vocational Subject\n  For JEE Main Paper 2A (B.Arch)- Physics, Chemistry, and Maths as compulsory subjects in class 12\n  For JEE Main Paper 2B (B.Plan) - Mathematics as a compulsory subject in class 12\nNumber of attempts:\n  Candidates can appear in JEE Main in three consecutive years from passing their class 12/qualifying exam\n  Two attempts in a year"]
+                },
+                {
+                "tag": "jee advanced eligibility",
+                "patterns":["what is the eligibility for jee advanced"],
+                "responses": ["Performance in JEE (Main):\n  Candidates should be among the top 2,50,000 successful candidates (including all categories) in B.E./B.Tech. Paper of JEE (Main)\nNumber of attempts:\n  A candidate can attempt JEE (Advanced) maximum of two times in two consecutive years.\nEarlier admission at IITs:\n  A candidate should NOT have been admitted to an IIT irrespective of whether or not the candidate continued in the program OR accepted an IIT seat by reporting “online” / at a “reporting centre” in the past. Candidates whose admission to IITs was cancelled (for whatever reason) after joining any IIT are also NOT eligible to appear for JEE (Advanced)"]
+                },
+                {
+                "tag": "neet eligibility",
+                "patterns": ["what is the eligibility for neet"],
+                "responses": ["Qualification Requirements:\n  Passed Class 10+2 in PCB and English from a recognized board.\nNEET Age Limit:\n  Must have completed 17 years as on December 31, 2022 No upper age limit is there.\nNEET Eligibility Marks in 12th:\n  UR - 50% OBC/SC/ST - 40% PWD - 45%\nNEET Attempt Limit:\n  No restrictions on the number of attempts."]
+                },
+                {
+                "tag": "jee resources",
+                "patterns": ["What are the resources for jee", "study materials for jee", "from where can i prepare for jee", "How can I prepare for jee", "jee syllabus"],
+                "responses": ["Here are a few resources:\n  https://engineering.careers360.com/articles/best-study-material-for-jee-main\n  https://byjus.com/jee/iit-jee-study-material/"]
+                },
+                {
+                 "tag": "jee fee",
+                 "patterns":["JEE Main Application Fee", "fee structure for jee mains", "jee main registration fee", "jee main exam fee"],
+                 "responses":["JEE Main 2022 B.E./B.Tech or B.Arch or B.Planning:\n  General/OBC: Boys - Rs. 650 Girls - Rs. 325\n  SC/ST/PwD/Transgender: Boys - Rs. 325 Girls - Rs. 325"]
+                },
+                {
+                "tag": "neet fee",
+                "patterns":["neet Application Fee", "fee structure for neet", "neet registration fee", "neet exam fee"],
+                "responses":["GC/OBC: INR 1400\nSC/ST/PwD: INR 750"]
+                },
+                {
+                "tag": "neet resources",
+                "patterns":["What are the resources for neet","neet syllabus", "study materials for neet", "from where can i prepare for neet", "How can i prepare for neet"],
+                "responses":["Here are a few resources:\n  https://medicine.careers360.com/articles/best-books-for-neet\n  https://byjus.com/neet/neet-study-material"]
+                },
+                {
+                "tag": "percentile nit",
+                "patterns":["minimum percentile required for nit", "What percentile is required for NITs", "What percentile will give me a descent seat in nit", "Good Percentile for JEE Mains"],
+                "responses":["General category students need to score a minimum of 95+ percentile to get NIT's. For reserved category students an 80+ percentile score is enough to get NIT's. Good score for JEE Mains is considered to be between or higher than the 230-250 marks"]
+                },
+                {"tag": "job twelve",
+                 "patterns": ["what government jobs can i apply after class twelve?", "what jobs can i apply after class twelve?"],
+                 "responses": ["you can apply for various 12th base jobs such as SSC,COUST GAURD,MERCHANT NAVY etc"]
+                },
+                {
+                "tag" : "exam query",
+                "patterns": ["Is there any exam I can give","What all exam can i give","What exam I can apply for","Which exam I can go for","Which exam is for my age"],
+                "responses": ["Yes , there is exam you can attempt.\nCheck your Exam section for more details."]
+                },
+                {
+                "tag": "counselor query",
+                "patterns": ["How could I contact the counselor ?", "Can you provide counselor number ?", "Where could i find counselor number ?", "Is it possible to get a counselor number ?", "counselor number ?"],
+                "responses":["You can visit https://www.education.gov.in/en/contact-us ."]
+                },
+                {
+                "tag": "career paths",
+                "patterns":["what subjects will lead to what career paths", "what are the available career paths", "what are the available career paths", "what are different career paths in education"],
+                "responses":["Here are some examples of career paths that you can explore.:\n  Accounting: Staff Accountant > Senior Accountant > Accounting Manager > Senior Accounting Manager > Firm Partner\n  Administrative: Administrative Assistant > Executive Assistant > Office Manager > Event and Conference Planner > Event Manager > Director of Events\n  Advertising: Advertising Sales Agent > Advertising Sales Manager > Account Manager  > Account Executive > VP of Advertising\n  Construction: Constructive Services Associate > Site Manager > Construction Manager > Facilities Manager > Project Manager\n  Engineering: Junior Engineer > Senior Engineer > Project Manager > Senior Project Manager > Engineering Consultant\n  Human Resources: HR Coordinator > HR Manager > HR Director > VP of HR > Chief of HR\n  Lawyer: Summer Associate > Junior Associate > Senior Associate > Partner > Managing Partner\n  Marketing: Marketing Coordinator or Marketing Specialist > Marketing Manager > Director of Marketing > VP of Marketing > Chief Marketing Officer\n  Technology: IT Help Desk > Help Desk Manager > Network, Cloud, or Systems Administrator > Network or Systems Engineer > Security and Compliance Director > Chief Technical Officer\n  Writer/Editor: Staff Writer or Journalist > Associate Editor > Editor > Senior Editor > Editor-in-Chief"]
+                },
+                {
+                "tag" : "engineering exam",
+                "patterns": ["What all engineering exam are there","can I know engineering entrance exam","engineering exam in india","engineering exam I can do"],
+                "responses": ["JEE Advanceed Entrance Exam\nJEE Main Entrance Exam\nBITSAT Entrance Exam\nGate Entrance Exam\nUGET Entrance Exam\nAIEEE Entrance Exam\nATIT ENtrance Exam"]
+                },
+                {
+                "tag" : "ministry education",
+                "patterns": ["How can I contact the Ministry Of Education","How can I contact the MOE","Give the contact number of Ministry Of Eduation","Give the contact number of MOE","Can I call Ministry of Education"],
+                "responses": ["You can visit https://www.education.gov.in/en/contact-us ."]
+                },
+                {
+                "tag" : "arts exam",
+                "patterns": ["What all arts & science exam are there","can I know arts & science entrance exam","arts & science exam in india","arts exam I can do","What arts exam are there","can I know arts entrance exam","arts exam in india","arts exam I can do"],
+                "responses": ["AIEED Entrance Exam\nCEED Entrance Exam\nNEED GDPD Entrance Exam\nNIFT Entrance Exam"]
+                },
+                {
+                        "tag" : "law exam",
+                        "patterns": ["What all law exam are there","can I know law entrance exam","law exam in india","law exam I can do"],
+                        "responses": ["CLAT Entrance Exam\nLAWCET Entrance Exam\nAILET Entrance Exam\nILSAT Entrance Exam"]
+                    },
+                    {
+                        "tag" : "medical exam",
+                        "patterns": ["What all medical exam are there","can I know medical entrance exam","medical exam in india","medical exam I can do"],
+                        "responses": ["AIIMS\nAIPMT\nAFMC Entrance Exam\nCOMEDK\nAIPVT Entrance Exam\nBHU PMT Entrance Exam\nVMU AICEE Entrance Exam\nCET Entrance Exam\nMHTCET Entrance Exam\nUPCAT Entrance Exam\nEAMCET Entrance Exam\nKEAM Entrance Exam\nCMC Vellore Entrance Exam"]
+                    },
+                    {
+                        "tag" : "hotel exam",
+                        "patterns": ["What all management exam are there","can I know hotel management entrance exam","hotel management exam in india","hotel management exam I can do"],
+                        "responses": ["NCHMCT JEE Entrance Exam\nIIHM eCHAT Entrance Exam\nAIMA UGAT Entrance Exam\nUPSEE BHMCT Entrance Exam\nUKSEE BHMCT Entrance Exam\nMAH HM CET Entrance Exam\nWBJEE HM Entrance Exam\nIPU CET BHMCT Entrance Exam\nPUTHAT Entrance Exam"]
+                    },
+                    {
+                        "tag" : "polytechnic exam",
+                        "patterns": ["What all polytechnic exam are there","can I know polytechnic entrance exam","polytechnic exam in india","polytechnic exam I can do"],
+                        "responses": ["BTEUP Entrance Exam\nJEECUP Entrance Exam"]
+                    },
+                    {
+                        "tag" : "IIM exam",
+                        "patterns": ["What all IIM exam are there","can I know IIM entrance exam","IIM exam in india","IIM exam I can do","how can I get into IIM","which exam to give to get into IIM"],
+                        "responses": ["Here are some exams to get admission in IIM.\nCAT Entrance exam"]
+                    },
+                    {
+                        "tag" : "IIT exam",
+                        "patterns": ["What all IIT exam are there","can I know IIT entrance exam","IIT exam in india","IIT exam I can do","how can I get into IIT","which exam to give to get into IIT"],
+                        "responses": ["Here are some exams to get admission in IIT.\nIITJEE Entrance Exam\nGATE Entrance Exam\nCAT Entrance exam\nJAM Entrance Exam\nCEED Entrance Exam\nIIT JAM Entrance Exam"]
+                    },
+                    {
+                        "tag" : "IIIT exam",
+                        "patterns": ["What all IIIT exam are there","can I know IIIT entrance exam","IIIT exam in india","IIIT exam I can do","how can I get into IIIT","which exam to give to get into IIIT"],
+                        "responses": ["Here are some exams to get admission in IIIT.\nPGEE Entrance Exam"]
+                    },
+                    {
+                        "tag" : "NIT exam",
+                        "patterns": ["What all NIT exam are there","can I know NIT entrance exam","NIT exam in india","NIT exam I can do","how can I get into NIT","which exam to give to get into NIT"],
+                        "responses": ["Here are some exams to get admission in NIT.\nAIEEE Entrance Exam\nNIMCET Entrance Exam"]
+                    },
+                    {
+                        "tag" : "management exam",
+                        "patterns": ["What all management exam are there","can I know management study entrance exam"," exam in india","management exam I can do"],
+                        "responses": ["CMAT Entrance Exam\nKMAT Entrance Exam\nSNAP Entrance Exam\nCAT Entrance exam\nIIFT Entrance Exam\nMAT Entrance Exam\nXAT Entrance Exam"]
+                    },
+                    {
+                        "tag" : "nine olympiad",
+                        "patterns": ["which olympiad to write for class nine","olympiad for class nine"],
+                        "responses": ["Here are some olympiad for class nine.\nInternational Science Olympiad (ISO)\nInternational Maths Olympiad (IMO)\nEnglish International Olympiad (EIO)\nGeneral Knowledge International Olympiad (GKIO)\nInternational Computer Olympiad (ICO)\nInternational Drawing Olympiad (IDO)\nNational Essay Olympiad (NESO)\nNational Social Studies Olympiad (NSSO)\nNational Talent Search Examination or NTSE"]
+                    },
+                    {
+                        "tag" : "uttar exam",
+                        "patterns": ["what all exam are there in uttar pradesh","exam in uttar pradesh"],
+                        "responses": ["Here are some of exams in Uttar Pradesh.\nUPSEE (Uttar Pradesh State Entrance Exam)\nAMUEEE (AMU Engineering Entrance Exam)\nGEEE (Galgotias University Entrance Examination)\nSEEE (Sanskriti Engineering Entrance Examination)"]
+                    },
+                    {
+                        "tag" : "assam exam",
+                        "patterns": ["what all exam are there in assam","exam in assam"],
+                        "responses": ["Here are some of exams in Assam.\nASSAM CEE(Assam Combined Entrance Examination)\nASSAM JAT(Assam Joint Admissions Test)"]
+                    },
+                    {
+                        "tag" : "bihar exam",
+                        "patterns": ["what all exam are there in bihar","exam in bihar"],
+                        "responses": ["Here are some of exams in Assam.\nBCECE (Bihar Combined Entrance Competitive Examination)\nBIHAR CET(Bihar Combined Entrance Test)"]
+                    },
+                    {
+                        "tag" : "gujarat exam",
+                        "patterns": ["what all exam are there in gujarat","exam in gujarat"],
+                        "responses": ["Here are some of exams in Gujarat.\nDAIICT(Dhirubhai Ambani Institute Entrance Test)\nGUJCET(Gujarat Common Entrance Test)\nPDPU(Pandir Deendayal Petroleum University)"]
+                    },
+                    {
+                        "tag" : "jammu exam",
+                        "patterns": ["what all exam are there in jammu kashmir","exam in jammu kashmir"],
+                        "responses": ["Here are some of exams in Jammu & Kashmir.\n BPEE CET(J&K Board Entrance Examinations)"]
+                    },
+                    {
+                        "tag" : "jharkhand exam",
+                        "patterns": ["what all exam are there in jharkhand","exam in jharkhand"],
+                        "responses": ["Here are some of exams in Jharkhand.\nJCECE(Jharkhand Combined Entrance Competitive Examination)"]
+                    },
+                    {
+                        "tag" : "karnataka exam",
+                        "patterns": ["what all exam are there in karnataka","exam in karnataka"],
+                        "responses": ["Here are some of exams in Karnataka.\nKCET(Karnataka CET)\nPESSAT(PES University Aptitude Test)"]
+                    },
+                    {
+                        "tag" : "andhra pradesh exam",
+                        "patterns": ["what all exam are there in andhra pradesh","exam in andhra pradesh"],
+                        "responses": ["Here are some of exams in Andhra Pradesh.\n GITAM GAT(GITAM University Admission Test)\nAP EAPCET(Andhra Pradesh Engineering,Agriculture and Medical Common Entrance)\nAUEET(Andhra University Engineering Entrance Test)\nKLUEEE( KL University Engineering Entrance Exam)\n AP PGECET(Andhra Pradesh Common Entrance Test)\nATIT( ICFAI University B.Tech Admission Test)\nECET FDH(Engineering Lateral Entry Entrance Test)"]
+                    },
+                    {
+                        "tag" : "maharastra exam",
+                        "patterns": ["what all exam are there in maharastra","exam in maharastra"],
+                        "responses": ["Here are some of exams in Maharastra.\n NMIMS NPAT - NMIMS University NPAT\n MHT CET - Maharashtra Common Entrance Test"]
+                    },
+                    {
+                        "tag" : "tamil nadu exam",
+                        "patterns": ["what all exam are there in tamil nadu","exam in tamil nadu"],
+                        "responses": ["Here are some of exams in Tamil Nadu.\nKarunya University Entrance Exam\n VEE - Vels Entrance Examination\n VTUEEE - Vel Tech University Engineering Entrance Exam\n VITEEE - Vellore Institute Of Technology Engineering Entrance Examination\n SRMJEEE - SRM Joint Engineering Entrance Examination"]
+                    },
+                    {
+                        "tag" : "kerala exam",
+                        "patterns": ["what all exam are there in kerala","exam in kerala"],
+                        "responses": ["Here are some of exams in Tamil Nadu.\n KEAM - Kerala Engineering Entrance\n CUSAT CAT - Cochin University Common Admission Test"]
+                    },
+                    {
+                        "tag" : "madhaya  exam",
+                        "patterns": ["what all exam are there in madhaya pradesh","exam in madhaya pradesh"],
+                        "responses": ["Here are some of exams in Madhaya Pardesh.\nMP PET - Madhya Pradesh Engineering Test"]
+                    },
+                    {
+                        "tag" : "odisha exam",
+                        "patterns": ["what all exam are there in odisha","exam in odisha"],
+                        "responses": ["Here are some of exams in Odisha.\n CUEE - Centurion University Entrance Examination\n KIITEE - KIIT University Entrance Exam"]
+                    },
+                    {
+                        "tag" : "punjab exam",
+                        "patterns": ["what all exam are there in punjab","exam in punjab"],
+                        "responses": ["Here are some of exams in Punjab.\nLPUNEST - Lovely Professional University NEST\n PTU CET - Punjab Technical University CET"]
+                    },
+                    {
+                        "tag" : "rajasthan exam",
+                        "patterns": ["what all exam are there in rajasthan","exam in rajasthan"],
+                        "responses": ["Here are some of exams in Punjab.\nREAP - Rajasthan Engineering Admission Process\n BUAT - Banasthali University Aptitude Test\nBITSAT - BITS Aptitude Test\n RPET - Rajasthan Engineering Entrance Test"]
+                    },
+                    {
+                        "tag" : "west exam",
+                        "patterns": ["what all exam are there in west bengal","exam in west bengal"],
+                        "responses": ["Here are some of exams in Punjab.\n WBJEE - West Bengal Joint Entrance Examination"]
+                    },
+                    {
+                        "tag" : "delhi exam",
+                        "patterns": ["what all exam are there in dehli","exam in dehli"],
+                        "responses": ["Here are some of exams in Dehli.\nIPU CET - Indraprastha University Common Entrance Test\nDUET - Delhi University Entrance Exam"]
+                    },
+                    {
+                        "tag" : "chandigarh exam",
+                        "patterns": ["what all exam are there in chandigarh","exam in chandigarh"],
+                        "responses": ["Here are some of exams in Chandigarh.\n CGPET - Chhattisgarh Pre-Engineering Test"]
+                    },
+                    {
+                        "tag" : "uttrakhand exam",
+                        "patterns": ["what all exam are there in uttarkhand","exam in uttarkhand"],
+                        "responses": ["Here are some of exams in Uttarkhand.\nUKSEE - Uttarkhand State Entrance Examination\nUPESEAT - UPES Engineering Aptitude Test"]
+                    },
+                    {
+                        "tag" : "telangana exam",
+                        "patterns": ["what all exam are there in telangana","exam in telangana"],
+                        "responses": ["Here are some of exams in Telangana.\nTS EAMCET - Telangana State Engineering Agricultural And Medical Common Entrance"]
+                    },
+                    {
+                        "tag" : "tripura exam",
+                        "patterns": ["what all exam are there in tripura","exam in tripura"],
+                        "responses": ["Here are some of exams in Tripura.\nTJEE - Tripura Joint Entrance Examination"]
+                    },
+                    {
+                        "tag" : "NTSE",
+                        "patterns": ["What is NTSE Exam","What is use of NTSE Exam"],
+                        "responses": ["NTSE or National Talent Search Examination is a national level exam conducted by the National Council of Educational Research and Training (NCERT) for granting scholarships to meritorious students studying in class 10th."]
+                    },
+                 {
+                        "tag" : "VITEE",
+                        "patterns": ["What is ViTEE Exam","What is use of vitee Exam"],
+                        "responses": ["Vellore Institute of Technology Engineering Entrance Examination (VITEEE) is the common entrance test for admission into VIT Vellore, VIT Chennai, VIT Bhopal and VIT Andhra Pradesh."]
+                    },
+                {
+                        "tag" : "VITEE syllabus",
+                        "patterns": ["What is ViTEE Syllabus","is ncert enough for vitee"],
+                        "responses": ["NCERT books are sufficient."]
+                    },
+                {
+                        "tag" : "jee difficulty",
+                        "patterns": ["Can i crack jee mains","is jee mains exam easy","Is ncert books enough for jee mains?"],
+                        "responses": ["NCERT books are sufficient."]
+                    },
+                
+                {
+                        "tag" : "jee pattern",
+                        "patterns": ["Is Jee MCQ based","How is jee exams given","What is the grading system of jee mains", "jee paper pattern", "jee exam pattern"],
+                        "responses": ["The 60 MCQ questions will be based on the same pattern as the previous year JEE mains papers. You will be awarded 4 marks for every correct answer and -1 marks for every incorrect answer.\nThe 30 Questions with numerical value answers will be given four marks for each correct answer and there will be a negative marking of 1 mark for each wrong answer."]
+                    },
+                {
+                "tag": "neet pattern",
+                "patterns":["Is neet MCQ based","How is neet exams given","What is the grading system of neet", "neet paper pattern", "neet exam pattern"],
+                "responses":["Mode of Exam:\n  Pen-paper based\nExam Duration:\n  3 hours\nNumber of Questions:\n  180 questions (MCQs)\nSubjects:\n  Questions are asked from Physics, Chemistry, and Biology (Botany & Zoology)\nQuestions from sections:\n  Physics - 45 questions Chemistry - 45 questions Biology (Botany + Zoology) - 90 questions\nMarking Scheme:\n  4 marks are awarded for each correct answer. 1 mark deducted for each correct answer"]
+                },
+                
+                {
+                        "tag" : "Why iit",
+                        "patterns": ["Why is IIT famous","Why should i join iit"," Advantageous of joining iit"],
+                        "responses": ["IITs have a highly influential and active network of alumni across the globe, education at IITs empowers the students with a critical thinking led scientific approach to solve problems that challenge humanity."]
+                    },
+                {
+                        "tag" : "advanced eligiblity",
+                        "patterns": ["How many marks are required for jee advanced","Minimum marks in jee mains required to qualify for jee advanced"," Min marks for jee advanced", "what is the minimum marks required to qualify jee advanced"],
+                        "responses": ["JEE Mains Passing marks for General: The minimum mark to pass JEE Main was 89.7."]
+                    },
+                {
+                        "tag" : "what jee",
+                        "patterns": ["What is jee course","What is jee exams"],
+                        "responses": ["The Joint Entrance Examination (JEE) is an engineering entrance assessment conducted for admission to various engineering colleges in India. It is constituted by two different examinations: the JEE Main and the JEE Advanced."]
+                    },
+                {
+                        "tag" : "jee fail",
+                        "patterns": ["What if i fail in JEE","What if i dont get good marks in jee"],
+                        "responses": ["If you were unable to crack JEE main, then don't lose hope. There are plenty of options to get you placed in a decent engineering college. "]
+                    },
+                {
+                        "tag" : "iit fees",
+                        "patterns": ["What is iit fees","is iit costly?"," is iit fees less", "what is the fee structure for iit", "iit fees per year"],
+                        "responses": ["The total tuition IIT Fees paid in every IIT for undergraduate courses per annum was ₹ 90000 (General Category). The other charges varied significantly, keeping the sum below ₹ 60000 per semester. "]
+                    }
+                
+        ]
+}
