@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_autoinstaller
 
 import time
 import os
@@ -110,9 +111,11 @@ def search(query):
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument('--headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+    chromedriver_autoinstaller.install()
+    #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
     #driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
     #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
+    driver = webdriver.Chrome()
     driver.get('https://www.google.com/')
     time.sleep(0.5)
     driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(query)
