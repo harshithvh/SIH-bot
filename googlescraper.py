@@ -104,7 +104,7 @@ def search(query):
         response = random.choice(intent['responses'])
         return response
     chrome_options = Options()
-    chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
+    #chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--incognito")
     chrome_options.add_argument("--no-sandbox")
