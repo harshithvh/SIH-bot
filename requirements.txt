@@ -17,6 +17,7 @@ tensorflow-cpu==2.5.0
 tensorflow-estimator==2.5.0
 tensorflow-io-gcs-filesystem==0.23.1
 nltk==3.7
+flask
 Flask==2.0.1
 Flask-Bootstrap==3.3.7.1
 Flask-Mail==0.9.1
