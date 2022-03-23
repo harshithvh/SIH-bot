@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 import time
@@ -113,6 +113,7 @@ def search(query):
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     #chromedriver_autoinstaller.install()
     #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+    ChromeDriverManager().install()
     driver = webdriver.Chrome(executable_path=str(os.environ.get("CHROMEDRIVER_PATH")),chrome_options=chrome_options)
     #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
     #driver = webdriver.Chrome(options = chrome_options)
