@@ -116,7 +116,7 @@ def search(query):
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     #chromedriver_autoinstaller.install()
     #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
-    driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
     #driver = webdriver.Chrome(executable_path=str(os.environ.get("CHROMEDRIVER_PATH")),chrome_options=chrome_options)
     #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
     #driver = webdriver.Chrome(options = chrome_options)
