@@ -104,15 +104,19 @@ def search(query):
     elif intent['tag'] == 'greeting' or intent['tag'] == 'thanks' or intent['tag'] == 'options' or intent['tag'] == 'name' or intent['tag'] == 'creator':
         response = random.choice(intent['responses'])
         return response
-    chrome_options = Options()
+    GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+    CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+    chrome_options = webdriver.ChromeOptions()
     #chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--incognito")
+    chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument('--headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     #chromedriver_autoinstaller.install()
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+    #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+    driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
     #driver = webdriver.Chrome(executable_path=str(os.environ.get("CHROMEDRIVER_PATH")),chrome_options=chrome_options)
     #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
     #driver = webdriver.Chrome(options = chrome_options)
