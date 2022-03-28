@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
 
 
 import time
@@ -94,8 +93,26 @@ def get_intent(tag):
     if intent['tag'] == tag:
       return intent
 
+def window_opener():
+  GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+  CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+  chrome_options = webdriver.ChromeOptions()
+  chrome_options.add_argument("--start-maximized")
+  chrome_options.add_argument("--incognito")
+  chrome_options.add_argument("--disable-dev-shm-usage")
+  chrome_options.add_argument('--disable-gpu')
+  chrome_options.add_argument("--no-sandbox")
+  chrome_options.add_argument('--headless')
+  chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+  chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+  #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+  driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+  #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
+  return driver
 
+driver = window_opener()
 def search(query):
+    global driver
     tag = predict_intent_tag(query)
     intent = get_intent(tag)
     if intent['tag'] == 'goodbye':
@@ -104,29 +121,30 @@ def search(query):
     elif intent['tag'] == 'greeting' or intent['tag'] == 'thanks' or intent['tag'] == 'options' or intent['tag'] == 'name' or intent['tag'] == 'creator':
         response = random.choice(intent['responses'])
         return response
-    GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
-    CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("--incognito")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument('--headless')
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    #GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+    #CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+    #chrome_options = webdriver.ChromeOptions()
+    #chrome_options.add_argument("--start-maximized")
+    #chrome_options.add_argument("--incognito")
+    #chrome_options.add_argument("--disable-dev-shm-usage")
+    #chrome_options.add_argument('--disable-gpu')
+    #chrome_options.add_argument("--no-sandbox")
+    #chrome_options.add_argument('--headless')
     #chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    #chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     #driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    #driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
     #driver = webdriver.Chrome('C:\chromedriver.exe', options = chrome_options)
     driver.get('https://www.google.com/')
-    time.sleep(0.5)
+    time.sleep(0.25)
     driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(query)
-    time.sleep(0.5)
+    time.sleep(0.25)
     driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(Keys.ENTER)
-    time.sleep(1)
+    time.sleep(0.5)
     page_source = driver.page_source.encode('utf-8')
-    driver.quit()
+
     soup = BeautifulSoup(page_source, features = 'lxml')
+    soup.encode('utf-8')
     data = soup.find(class_ = 'wxAfhc')
 
     try:
@@ -141,3 +159,5 @@ def search(query):
         except AttributeError:
             response = random.choice(intent['responses'])
             return response
+
+
