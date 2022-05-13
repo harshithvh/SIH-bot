@@ -3,7 +3,7 @@
 	[
 		{
 	     "tag": "greeting",
-	     "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","How are you","Whats up"],
+	     "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","How are you","Whats up", "Greetings"],
 	     "responses": ["Hello, how can I help?", "Good to see you again", "Hi there, how can I help?"]
         	},
         	{
