@@ -147,6 +147,8 @@ def search(query):
     soup.encode('utf-8')
     data = soup.find(class_ = 'wxAfhc')
 
+    links = []
+
     try:
         text1 = data.find_all(class_ = 'bjV81b')
         text2 = data.find_all(class_ = 'JDfRZb')
@@ -157,7 +159,15 @@ def search(query):
             data = soup.find(class_ = 'hgKElc').get_text().strip()
             return data
         except AttributeError:
-            response = random.choice(intent['responses'])
-            return response
+            try:
+                link = soup.find_all("div", class_ = 'yuRUbf', limit=3)
+                for each in link:
+                    href = each.find('a')['href']
+                    links.append(href)
+                return links
+            except AttributeError:
+                response = random.choice(intent['responses'])
+                return response
+             
 
 
