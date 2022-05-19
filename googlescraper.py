@@ -71,7 +71,7 @@ model.summary()
 
 history = model.fit(X.toarray(), y.toarray(), epochs=32, batch_size=1)
 
-INTENT_NOT_FOUND_THRESHOLD = 0.40
+INTENT_NOT_FOUND_THRESHOLD = 0.92
 
 def predict_intent_tag(message):
   message = clean_corpus([message])
@@ -160,14 +160,16 @@ def search(query):
             return data
         except AttributeError:
             try:
-                link = soup.find_all("div", class_ = 'yuRUbf', limit=3)
-                for each in link:
-                    href = each.find('a')['href']
-                    links.append(href)
-                return links
-            except AttributeError:
                 response = random.choice(intent['responses'])
                 return response
-             
+            except TypeError:
+                try:
+                    link = soup.find_all("div", class_ = 'yuRUbf', limit=3)
+                    for each in link:
+                        href = each.find('a')['href']
+                        links.append(href)
+                    return links
+                except AttributeError:
+                     return "Sorry couldn't find anything. I am still learning" 
 
 

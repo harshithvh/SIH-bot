@@ -17,11 +17,6 @@
             "responses": ["Happy to help!", "Any time!", "My pleasure"]
                 },
                 {
-            "tag": "noanswer",
-            "patterns": [],
-            "responses": ["Sorry couldn't find anything. I am still learning"]
-                },
-                {
             "tag": "options",
             "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?", "What support is offered","what can you do for me",
                 "what are the thing you can do"],
